@@ -1,0 +1,678 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #667;
+}
+
+@font-face {
+        font-family: font1;
+        src: url("font/CrimsonPro-Italic-VariableFont_wght.ttf");
+      }
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary-color);
+} 
+
+#page-layout{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* HEADER */
+#header-naslovna{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
+    url("../slike/header-background.jpg") no-repeat fixed center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* glavna navigacija */ 
+.main-nav{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    z-index: 10; 
+}
+
+.nav1, .logo{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    /* border: 1px solid yellow; */
+}
+
+.main-nav a{
+    color: white;
+    width: 100px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav1 a:link{
+    color: white;
+    background-color:rgba(219, 175, 181, 0.3);
+    border: 1px solid white;
+    border-radius: 10%;
+    
+}
+
+.nav1 a:visited{
+    color: white;
+    background-color:rgba(219, 175, 181, 0.3);
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+.nav1 a:hover{
+    color: rgb(20, 20, 2);
+    background-color:rgb(203, 215, 229);
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+.nav1 a:focus{
+    color: rgb(20, 20, 2);
+    border: rgba(219, 175, 181, 0.3);
+}
+
+/* LOGO I NASLOV */
+.logo-naslov{
+    position: relative;
+    top: 50px;
+    text-align:center;
+    margin: 0px 0px 190px 0px;
+}
+
+.image-logo{
+    padding: 20px; 
+}
+
+ .gl-naslov{
+    color: white;
+    font-size: 3em;
+    padding: 3% 0;
+    font-weight: 900; /* ne radi */
+    text-transform: uppercase;
+}
+
+/* VELIKI IZBORNIK */
+#veliki-izbornik{
+    font-family: font1;
+    margin: 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+}
+
+.big{
+    display: flex;
+    width: 300px;
+    height: auto;
+    align-items: center;
+}
+
+.box-data{
+    border: 1px dotted var(--primary-color);
+    margin-top: -100px;
+    margin-bottom: 50px;
+    padding: 3%;
+    display:flex;
+    flex-direction: column;
+    flex-basis: 33%;
+}
+
+.big-sadrzaj{
+    padding-bottom: 30px;  
+}
+
+.big-title h3{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.big-title{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+/* ----------------------------------- za veliki izbornik i blog post -----------------*/
+.big a, .blog-post a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.big a:link, .blog-post a:link{
+    color: var(--primary-color);
+}
+
+.big a:visited, .blog-post a:visited{
+    color: var(--primary-color);
+}
+.big-title h3:hover, .vise a:hover{
+    color: red;
+}
+
+.big a:focus, .blog-post a:focus{
+    color: red; 
+}
+
+
+/* O NAMA NA NASLOVNOJ STRANICI */
+ #o-nama-nsl{
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0, 0.01) 0%),
+    url("../slike/slider_bg1-4.jpg") no-repeat fixed center center/cover;  
+}
+
+.o-nama-naslovna1{
+    flex-basis: 100%; 
+    padding: 0 0 2% 0;
+}
+
+.o-nama-naslovna2{
+    width: 400px;;
+    border: 1px solid white;
+    margin: 5px;
+    background: rgba(201, 194, 194, 0.3);
+    border-radius: 5px;
+}
+
+.o-nama-naslovna3{
+    width: 400px;;
+    border: 1px solid white;
+    margin: 5px;    
+}
+
+#o-nama-nsl p{
+    color: rgb(203, 215, 229);
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;  
+}
+
+#o-nama-nsl h2{
+    color: rgb(203, 215, 229);
+    font-size: 2em;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+#o-nama-nsl h3{
+    color: rgb(247, 248, 250);
+    font-size: 1,5em;
+    text-align: center;
+    padding: 1%;
+    background: rgba(25, 25, 206, 0.9);
+    border-radius: 5px;
+}
+
+#o-nama-nsl h4{
+    color: rgb(203, 215, 229);
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1%;
+} 
+
+#o-nama-nsl a, .footer-kontakt a{
+    color: white;
+}
+
+.kontakt a{
+    color:#e47d7d
+}
+
+ #o-nama-nsl a:hover, .footer-kontakt a:hover, .kontakt a:hover{
+    background-color: #1771F1;
+ }
+/* IZ BLOGA */
+
+#iz-bloga{
+    background:
+    url("../slike/iz-bloga-background.png") no-repeat fixed center center/cover;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 60vh;
+}
+
+.h-iz-bloga{
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+    background: rgba(25, 25, 206, 0.9);
+}
+
+.iz-bloga{
+    display: flex;
+    align-items: center; 
+    gap: 25px;  
+}
+
+.iz-bloga .card{
+    position: relative;
+    width: 30vh;    /*   podesiti kod responzivnosti */
+    height: 300px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.25);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.iz-bloga .card:hover{
+    height: 420px;
+}
+
+.iz-bloga .card .imgBx{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    background: var(--img);
+    background-size: 110%;
+    background-position: center;
+    transition: 0.5s;
+    filter: blur(2px);
+}
+
+.iz-bloga .card:hover .imgBx{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: blur(0px);
+}
+
+.iz-bloga .card .imgBx::before{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    height: 80px;
+    border-radius: 40px;
+    background: #fff;
+}
+
+.iz-bloga .card .imgBx::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 75px 70px 0 40px #fff;
+}
+
+.iz-bloga .card .content{
+    position: relative;
+    top: -40px;
+    z-index: 10;
+    padding: 0 30px;
+    transition: 0.5s;
+}
+.iz-bloga .card .content h3{
+    position: relative;
+    font-size: 1.25em;
+    color: #801313;
+}
+
+.iz-bloga .card .content h3 span{
+    position: absolute;
+    bottom: -15px;
+    font-weight: 400;
+    font-size: 0.65em;
+    opacity: 0.75;
+}
+
+.iz-bloga .card .content p{
+    position: relative;
+    padding-top: 8%;
+    opacity: 0;
+    transition: 1s;
+    color: #333;
+
+}
+.iz-bloga .card:hover .content p{
+    opacity: 1;
+}
+
+.iz-bloga a{
+    text-decoration: none;
+}
+
+
+
+/*-------------------- O NAMA & KONTAKT-----------------------------*/
+
+.header-naslovna{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
+    url("../slike/o-nama2.jpg") no-repeat fixed top/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.naslov{
+    color: white;
+    position: relative;
+    top: 70px;
+    text-align:center;
+    margin: 0px 0px 190px 0px;
+}
+
+
+.tijelo-section{
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0 70px 0;
+}
+
+.article-o-nama{
+    margin: 20px;
+    flex-basis: 500px;
+    line-height: 1.5;
+}
+
+.article-o-nama h2{
+    text-align: center;
+}
+
+/*---------------------------------------------  BLOG -----------------------------------*/
+.blog { 
+    font-family: font1;
+    
+    padding: 2% 0;
+    display: flex;
+    flex-wrap: row;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+}
+
+.blog-posts {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.blog-post {
+    width: 350px;
+    margin-top: 2%;
+    border-radius: 2.5%;
+    padding: 2%;
+    box-shadow: 0 2px 6px 2px rgba(25, 25, 206, 0.2);
+    background-color: rgba(196, 196, 223, 0.2);
+}
+
+.blog-img{
+    border-radius: 2%;
+    transition: filter 0.9s ease;
+    
+}
+
+.blog-img:hover {
+    filter: blur(2px)
+}
+
+.blog-post-date {
+    padding: 2px;
+}
+
+.blog-post h3 {
+    color: #801313;
+    padding: 5px;
+}
+
+.blog-post-desc {
+    text-align: justify;
+   
+}
+
+.vise {
+    color: #801313;
+    text-transform: uppercase;
+}
+
+/*----------------------------BLOG POST ----------------------------*/
+
+#single-post-wrap {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.single-post {
+    
+    max-width: 40%;
+    height: auto;
+    margin: 2%; 
+}
+
+.article-post {
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 2%;
+
+}
+
+.article-post p {
+    line-height:1.5;
+    text-align: justify;
+    padding-bottom: 1%;
+
+}
+
+.article-post h3 {
+    text-align: left;
+    padding: 1%;
+}
+
+.article-post img {
+    border-radius: 2%;
+    margin: 0.5%
+     
+}
+
+#slike{
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+}
+
+.btn-blog {
+    margin-top: 4%;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.single-post h2, aside h3 {
+    color: #801313;
+}
+
+time {
+    text-decoration-line: underline;
+    text-shadow: 0 2px 6px 2px grey;;
+}
+
+aside {
+    text-align: center;
+    font-family: font1;
+    float: right;
+    margin: 5% 0;
+    border-left: solid 1px grey;
+    padding-left: 2%;
+    
+}
+
+.aside-article{
+    text-align: center;
+    width: 200px;
+    padding: 0 0 5px 0;
+    margin: 2%;
+    border: 1px solid #667;
+    border-radius: 2%;
+}
+
+.aside-article img{
+    padding-top: 12px;
+    border-radius: 8%;
+
+}
+
+aside h3 {
+    text-transform: uppercase;
+    margin-bottom: 10%;
+    background-color:blue;
+    color: white;
+}
+
+aside p {
+    color: white;
+    
+    padding-top: 10px;
+    background-color:#1771F1;
+    border-radius: 2% 2% 0 0 ;
+}
+
+aside a{
+    text-decoration-line: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  FOOTER */
+
+footer{
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.9) 100%), 
+    url("../slike/header-background.jpg") no-repeat fixed center center/cover;
+}
+
+.footer-container{
+   margin: 0px auto;  
+    padding: 2%;
+  display: flex;
+  align-content: center;
+    
+}
+
+.footer-radno-vrijeme{
+    width: 400px;
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.footer-osnovni-podaci{
+    width: 400px;
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.footer-kontakt{
+    width: 400px;
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 1px solid white; 
+}
+
+.footer-copyright{
+    padding: 15px;
+    background: rgba(44, 39, 39, 0.5);
+}
+
+footer p{
+    color: rgb(175, 202, 219);
+    text-align: center;
+    padding: 3%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+footer h3{
+    color: white;
+    font-family: Helvetica, sans-serif;;
+    text-transform: uppercase;
+    background: rgba(25, 25, 206, 0.9);
+    padding: 2px 100px;
+    border-bottom: 1px solid white;;
+    border-radius: 5px;
+}
+
+.footer-radno-vrijeme span, .footer4 span, .o-nama-naslovna2 span {
+    color: white; 
+}
+
+.facebook-logo{
+   border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

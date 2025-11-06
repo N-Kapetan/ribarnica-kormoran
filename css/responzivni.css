@@ -1,0 +1,71 @@
+@media (max-width: 1200px) {
+    
+    .main-nav a {
+        width: 80px;;
+        font-size: 0.7em;
+    }
+
+    .logo-naslov .naslov{
+        margin: 0px 0px 90px 0px;
+    }
+
+    .image-logo{
+        padding: 0px;
+    }
+
+    .gl-naslov{
+        font-size: 2em;
+    }
+
+    #veliki-izbornik{
+        align-items: center;
+    }
+    .footer-container{
+        flex-wrap: wrap; 
+    }
+    
+}
+
+
+@media (max-width: 750px) {
+    .main-nav{
+        flex-direction: column;
+    }
+
+    #veliki-izbornik{
+    flex-direction: column;
+    align-items: center;
+    }
+
+    #o-nama-nsl h2{
+    font-size: 1.5em;
+    }
+
+    #iz-bloga{
+        height: 60vh;
+    }
+
+    .iz-bloga{
+        gap: 5px;
+    }
+
+    .iz-bloga .card{
+        width: 20vh;    /*   podesiti kod responzivnosti */
+        height: 250px;
+    }
+
+    #o-nama{
+        flex-direction: column;
+    }
+
+    .tijelo-section {
+        flex-direction: column;
+    }
+    
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-radno-vrijeme, .footer-osnovni-podaci, .footer-kontakt{
+        width: auto;
+    }
+}
