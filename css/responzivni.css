@@ -23,9 +23,44 @@
     .footer-container{
         flex-wrap: wrap; 
     }
+
+    /*----------------------------BLOG POST ----------------------------*/
+
+    #single-post-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .single-post {
+    max-width: 60%;
+    height: auto;
+    margin: 2%; 
     
 }
+        
+    aside h3{
+    display: none;
+    
+}
+    aside {
+        float: none;
+        padding-bottom: 2%;
+        margin: 0;
+        border-left: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 5px;
+    }
 
+    .aside-article{
+       width: 150px;
+       height: 150px;
+    }
+
+}
 
 @media (max-width: 750px) {
     .main-nav{
