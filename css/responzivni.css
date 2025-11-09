@@ -24,6 +24,9 @@
         flex-wrap: wrap; 
     }
 
+    
+
+
     /*----------------------------BLOG POST ----------------------------*/
 
     #single-post-wrap {
@@ -36,11 +39,11 @@
     max-width: 60%;
     height: auto;
     margin: 2%; 
-}
+    }
         
     aside h3{
     display: none;
-}
+    }
 
     aside {
         float: none;
@@ -61,15 +64,34 @@
 
 }
 
+/*----------------------------------------------- MEDIA 750PX -------------------------*/
+
 @media (max-width: 750px) {
     .main-nav{
         flex-direction: column;
     }
 
     #veliki-izbornik{
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .big-thumbnail{
+        width: 50%;;
+    }
+
+    .big-thumbnail img{
+        width: 50%;
+    }
+
+    .box-data{
+         width: 50%;
+         margin-top: -60px;
+    }
+
+    
+
+    
 
     #o-nama-nsl h2{
     font-size: 1.5em;
@@ -102,4 +124,32 @@
     .footer-radno-vrijeme, .footer-osnovni-podaci, .footer-kontakt{
         width: auto;
     }
+    
+
+    /*---------------------------- BLOG --------------------------------*/
+    .blog-post {
+        width: 150px;
+        height: 150px;;
+    }
+
+    .blog-img{
+        width: 70%;
+        height: 40%;   
+    }
+
+    .blog-post-desc{
+        display: none;
+    }
+
+    .vise {
+        font-size: 80%;
+    }
+
+    /*------------------------------ O NAMA ------------------------------ */
+    .o-nama-kontakt{
+        width: 50%;
+        height: 50%;
+    }
+
+
 }
