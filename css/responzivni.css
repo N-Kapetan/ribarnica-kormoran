@@ -36,13 +36,12 @@
     max-width: 60%;
     height: auto;
     margin: 2%; 
-    
 }
         
     aside h3{
     display: none;
-    
 }
+
     aside {
         float: none;
         padding-bottom: 2%;
