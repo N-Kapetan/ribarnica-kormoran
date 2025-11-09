@@ -71,37 +71,44 @@
         flex-direction: column;
     }
 
+    .logo-naslov{
+        font-size: 70%;
+    }
+
+    .image-logo{
+        width: 70%;
+    }
+
+    /* VELIKI IZBORNIK */
     #veliki-izbornik{
-        flex-direction: column;
-        align-items: center;
+        
+        
+        font-size: 80%;
     }
-
-    .big-thumbnail{
-        width: 50%;;
-    }
-
-    .big-thumbnail img{
-        width: 50%;
-    }
-
-    .box-data{
-         width: 50%;
-         margin-top: -60px;
-    }
-
     
 
-    
-
-    #o-nama-nsl h2{
-    font-size: 1.5em;
+    /* O NAMA NA NASLOVNOJ STRANICI */
+    #o-nama-nsl h2, #o-nama-nsl h4, .o-nama-naslovna2{
+    font-size: 70%;
     }
+
+    .o-nama-naslovna3{
+        display:none;
+    }
+
+    .o-nama-naslovna2{
+        width: 200px;
+
+    }
+
 
     #iz-bloga{
         height: 60vh;
+        display: none;
     }
 
     .iz-bloga{
+        
         gap: 5px;
     }
 
@@ -151,5 +158,19 @@
         height: 50%;
     }
 
+    /*------------------------- FOOTER --------------------------*/
+    .footer-container{
+        font-size: 70%;
+    }
 
+
+}
+
+    /*----------------------------------- MEDIA 596 px -----------------*/
+@media (max-width: 596px){
+
+    .big-thumbnail img{
+        width: 50%;
+    }  
+    
 }
