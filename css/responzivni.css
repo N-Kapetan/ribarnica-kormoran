@@ -24,9 +24,6 @@
         flex-wrap: wrap; 
     }
 
-    
-
-
     /*----------------------------BLOG POST ----------------------------*/
 
     #single-post-wrap {
@@ -71,6 +68,11 @@
         flex-direction: column;
     }
 
+    p{
+        font-size: 90%;
+
+    }
+
     .logo-naslov{
         font-size: 70%;
     }
@@ -81,12 +83,9 @@
 
     /* VELIKI IZBORNIK */
     #veliki-izbornik{
-        
-        
         font-size: 80%;
     }
     
-
     /* O NAMA NA NASLOVNOJ STRANICI */
     #o-nama-nsl h2, #o-nama-nsl h4, .o-nama-naslovna2{
     font-size: 70%;
@@ -101,10 +100,9 @@
 
     }
 
-
     #iz-bloga{
         height: 60vh;
-        display: none;
+        
     }
 
     .iz-bloga{
@@ -151,6 +149,13 @@
     .vise {
         font-size: 80%;
     }
+
+    /*-------------------------- BLOG POST ----------------------*/
+    .single-post {
+    
+    max-width: 100%;
+    
+}
 
     /*------------------------------ O NAMA ------------------------------ */
     .o-nama-kontakt{

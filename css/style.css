@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, p, font1{
     font-size: 1em;
 }
 
+p{
+    text-align: left;
+}
+
 @font-face {
         font-family: font1;
         src: url("font/CrimsonPro-Italic-VariableFont_wght.ttf");
