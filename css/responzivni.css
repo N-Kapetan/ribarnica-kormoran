@@ -59,7 +59,14 @@
        height: 150px;
     }
 
+    .card-grid{
+    grid-template-columns: repeat(2, 1fr);
 }
+
+
+}
+
+
 
 /*----------------------------------------------- MEDIA 750PX -------------------------*/
 
@@ -70,7 +77,6 @@
 
     p{
         font-size: 90%;
-
     }
 
     .logo-naslov{
@@ -97,65 +103,51 @@
 
     .o-nama-naslovna2{
         width: 200px;
-
     }
 
     #o-nama{
         flex-direction: column;
     }
 
-
-
     /*--------- iz bloga na naslovnoj stranici -------------*/
 
     #iz-bloga{
-        height: 30vh;
-        
+        height: 30vh; 
     }
 
-    .iz-bloga{
-        
+    .iz-bloga{ 
         gap: 5px;
     }
 
     .iz-bloga .card{
-        width: 50%;    /*   podesiti kod responzivnosti */
+        width: 50%;    
         height: 90px;
     }
 
     .iz-bloga .card .imgBx{
         background-size: 180%;
-    filter: none;
-}
+        filter: none;
+    }
 
-.iz-bloga .card .content h3{
-    font-size: 0.9em;
-}
+    .iz-bloga .card .content h3{
+        font-size: 0.9em;
+    }
 
-.iz-bloga .card .content h3 span{
-    bottom: -25px;
-    font-size: 0.8em;
-    
-}
+    .iz-bloga .card .content h3 span{
+        bottom: -25px;
+        font-size: 0.8em;
+    }
 
-.iz-bloga .card .content p{
-    padding-top: 40%;
-    font-size: 0.8em;
-    
+    .iz-bloga .card .content p{
+        padding-top: 40%;
+        font-size: 0.8em;
+    }
 
-}
-
-/* -------------------- o nama & kontakt -----------------*/
-.tijelo-section {
-    margin: 30px 0 30px 0;
+    /* -------------------- o nama & kontakt -----------------*/
+    .tijelo-section {
+        margin: 30px 0 30px 0;
         flex-direction: column;
     }
-    
-
-    
-    
-    
-    
 
     /*---------------------------- BLOG --------------------------------*/
     .blog-post {
@@ -178,10 +170,8 @@
 
     /*-------------------------- BLOG POST ----------------------*/
     .single-post {
-    
     max-width: 100%;
-    
-}
+    }
 
     /*------------------------------ O NAMA ------------------------------ */
     .o-nama-kontakt{
@@ -194,21 +184,45 @@
         font-size: 70%;
     }
 
-
-}
-
-.footer-container{
+    .footer-container{
         flex-direction: column;
     }
+
     .footer-radno-vrijeme, .footer-osnovni-podaci, .footer-kontakt{
         width: auto;
     }
 
+    
+
+.card-grid{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+}  
+
     /*----------------------------------- MEDIA 596 px -----------------*/
 @media (max-width: 596px){
 
+    .filters{
+    display: flex;
+    flex-direction:column;
+    gap: 12px;
+    text-align: left;
+    justify-content: flex-start;;
+    height: auto;
+    margin: 30px;
+    flex-wrap: wrap;
+
+}
+
     .big-thumbnail img{
         width: 50%;
-    }  
-    
+    }     
+}
+
+
+@media (max-width: 550){
+
 }
