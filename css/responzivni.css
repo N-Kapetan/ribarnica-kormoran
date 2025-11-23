@@ -69,6 +69,10 @@
     grid-template-columns: repeat(1, 1fr);
 }
 
+#cjenik{
+     grid-template-columns: repeat(2, 1fr);
+}
+
 }
 
 
@@ -197,8 +201,6 @@
         width: auto;
     }
 
-    
-
 .card-grid{
     grid-template-columns: repeat(1, 1fr);
 }
@@ -224,7 +226,11 @@
 
     .big-thumbnail img{
         width: 50%;
-    }     
+    }  
+    
+    #cjenik{
+     grid-template-columns: repeat(1, 1fr);
+}
 }
 
 
