@@ -46,31 +46,31 @@
         <!--------------------------------------- filteri  ------------------>
         
         <div class="filters">
-          <button class="active">Sve</button>
-          <button>Morski specijaliteti</button>
-          <button>Slatkovodna riba</button>
-          <button>Juhe</button>
-          <button>Ostalo</button>
+          <button class="active" data-kategorija="sve">Sve</button>
+          <button data-kategorija="morski">Morski specijaliteti</button> <!-- data-* atribut omogućuje da se mapira gumb na točnu klasu koju koristimo u receptima.-->
+          <button data-kategorija="slatkovodna">Slatkovodna riba</button>
+          <button data-kategorija="juhe">Juhe</button>
+          <button data-kategorija="ostalo">Ostalo</button>
         </div>
 
         <!---------------------------------- recepti ----------------->
         <section class="card-grid">
           
-            <article>
+            <article class="recept juhe">
             <div class="card-recepti">
                     <a href="recepti/juha-od-lososa.html">
                   <img class="card-img" src="slike/recepti/juha-od-lososa.jpg" alt="juha od lososa" height="150px" width="300px">
                 <h3 class="naslov-recepta">Juha od lososa</h3></a></div>
             </article>
 
-            <article>
+            <article class="recept morski">
             <div class="card-recepti">
                     <a href="recepti/przene-srdelice.html">
                   <img class="card-img" src="slike/recepti/przene-srdelice.jpg" alt="przene-srdelice" height="150px" width="300px">
                 <h3 class="naslov-recepta">Pržene srdelice</h3></a></div>
             </article>
 
-            <article>
+            <article class="recept ostalo">
             <div class="card-recepti">
                     <a href="recepti/kozice-u-buzaru.html">
                   <img class="card-img" src="slike/recepti/kozice-u-buzaru.jpg" alt="orada" height="150px" width="300px">
@@ -78,41 +78,42 @@
               </div>
             </article>
 
-            <article>
+            <article class="recept morski">
             <div class="card-recepti">
                     <a href="recepti/orada-na-brzin.html">
                   <img class="card-img" src="slike/recepti/orada-na-brzinu.jpg" alt="orada" height="150px" width="300px">
                 <h3 class="naslov-recepta">Orada na brzinu</h3></a></div>
             </article>
 
-            <article>
+            <article class="recept juhe">
             <div class="card-recepti">
                     <a href="recepti/popara.html">
                   <img class="card-img" src="slike/recepti/popara.jpg" alt="orada" height="150px" width="300px">
                 <h3 class="naslov-recepta">Popara</h3></a></div>
             </article>
 
-            <article>
+            <article class="recept morski">
             <div class="card-recepti">
                     <a href="recepti/przene-lignje.html">
                   <img class="card-img" src="slike/recepti/przene-lignje.jpg" alt="orada" height="150px" width="300px">
                 <h3 class="naslov-recepta">Pržene lignje</h3></a></div>
             </article>
 
-            <article>
+            <article class="recept morski" >
             <div class="card-recepti">
                     <a href="recepti/tuna-s-tjesteninom.html">
                   <img class="card-img" src="slike/recepti/tuna-s-tjesteninom.jpg" alt="orada" height="150px" width="300px">
                 <h3 class="naslov-recepta">Tuna s tjesteninom</h3></a></div>
             </article>
 
-            <article>
+            <article class="recept morski">
             <div class="card-recepti">
                     <a href="recepti/rizoto-s-plodovima-mora.html">
                   <img class="card-img" src="slike/recepti/rizoto-s-plodovima-mora.jpg" alt="orada" height="150px" width="300px">
                 <h3 class="naslov-recepta">Rižoto s plodovima mora</h3></a></div>
             </article>
         </section>
+        
         
         
       </main>
@@ -173,5 +174,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -63,6 +63,11 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.recepti2, .recepti1{
+    max-width: 90%;
+    margin: 2% 10%;
+    grid-template-columns: repeat(1, 1fr);
+}
 
 }
 

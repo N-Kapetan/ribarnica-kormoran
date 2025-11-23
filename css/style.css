@@ -42,6 +42,10 @@ body{
     align-items: center;
 }
 
+main{
+    margin-top: 5px;
+}
+
 /* glavna navigacija */ 
 .main-nav{
     position: sticky;
@@ -465,13 +469,11 @@ body{
 /*----------------------------BLOG POST ----------------------------*/
 
 #single-post-wrap {
-    
     display: flex;
     justify-content: center;
 }
 
 .single-post {
-    
     max-width: 40%;
     height: auto;
     margin: 2%; 
@@ -633,16 +635,14 @@ footer h3{
 
 /*-------------------------------------------------- recepti ----------------------------------------*/
 
-
-
 .filters{
+    max-width: 100%;
+    height: auto;
+    margin: 2% 20% 1% ;
     display: flex;
     gap: 12px;
     text-align: center;
-    
-    justify-content: center;
-    height: auto;
-    margin: 30px;
+    justify-content: left;
     flex-wrap: wrap;
 
 }
@@ -651,7 +651,7 @@ footer h3{
     padding: 10px 16px;
     border-radius: 6px;
     border: none;
-    background-color: rgb(148, 241, 234);
+    background-color: rgba(181, 243, 238, 0.7);
     cursor: pointer;
 }
 
@@ -661,8 +661,7 @@ footer h3{
 }
 
 
-
-/*------ kartice -----*/
+/*------ kartice za recepte -----*/
 
 
 .card-grid{
@@ -678,7 +677,6 @@ footer h3{
 }
 
 .card-recepti{
-
     width: 100%;
     position: relative;
     display: inline-block;
@@ -725,7 +723,7 @@ footer h3{
   transform: translateX(-50%);
   margin: 0;
   padding: 10px 20px;
-  background-color: rgba(148, 241, 234, 0.7);
+  background-color: rgba(181, 243, 238, 0.7);
   color: rgb(12, 2, 2);
   font-size: 1.2em;
   transition: bottom 0.4s ease, opacity 0.4s ease;
@@ -738,8 +736,59 @@ footer h3{
   opacity: 1;
 }
 
+/*---------------------------------------------- recepti post----------------------------*/
 
+.recepti1{
+    max-width: 40%;
+    height: auto;
+    margin: 2% 30%;
+    
 
+}
+
+.recepti2{
+    max-width: 40%;
+    height: auto;
+    margin: 2% 30%;
+    background: rgba(181, 243, 238, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0 ,0.2);
+    border-radius: 2%;
+    display: grid;
+    text-align: left;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.priprema, .sastojci{
+
+    padding: 30px;
+
+}
+
+.article-post {
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 2%;
+}
+
+.recepti1 p, .recepti2 li {
+    line-height:1.5;
+    text-align: justify;
+    padding-bottom: 1%;
+}
+
+.article-post h3 {
+    text-align: left;
+    padding: 1%;
+}
+
+.recepti1 img {
+    width: 100%;
+    height:auto;
+    border-radius: 2%;
+    margin-bottom: 2%  
+}
 
 
 
