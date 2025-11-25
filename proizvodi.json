@@ -1,0 +1,23 @@
+[
+  { "naziv": "Šaran", "vrsta": "Slatkovodna riba", "cijena": 5.60 },
+  { "naziv": "Som", "vrsta": "Slatkovodna riba", "cijena": 11.00 },
+  { "naziv": "Smuđ", "vrsta": "Slatkovodna riba", "cijena": 5.60 },
+  { "naziv": "Štuka", "vrsta": "Slatkovodna riba", "cijena": 6.80 },
+  { "naziv": "Tolstolobik", "vrsta": "Slatkovodna riba", "cijena": 3.72 },
+  { "naziv": "Amur", "vrsta": "Slatkovodna riba", "cijena": 5.57 },
+
+  { "naziv": "Orada", "vrsta": "Morska riba", "cijena": 9.82 },
+  { "naziv": "Brancin", "vrsta": "Morska riba", "cijena": 9.82 },
+  { "naziv": "Hobotnica", "vrsta": "Morska riba", "cijena": 16.59 },
+  { "naziv": "Lignja", "vrsta": "Morska riba", "cijena": 11.68 },
+  { "naziv": "Tuna", "vrsta": "Morska riba", "cijena": 21.30 },
+  { "naziv": "Srdela", "vrsta": "Morska riba", "cijena": 4.00 },
+
+  { "naziv": "Šaranove potkove", "vrsta": "Ekstra obrađena riba", "cijena": 8.70 },
+  { "naziv": "Odresci od šarana", "vrsta": "Ekstra obrađena riba", "cijena": 7.40 },
+  { "naziv": "Filet od smuđa", "vrsta": "Ekstra obrađena riba", "cijena": 22.50 },
+  { "naziv": "Odresci od tolstolobika", "vrsta": "Ekstra obrađena riba", "cijena": 7.17 },
+  { "naziv": "Odresci od amura", "vrsta": "Ekstra obrađena riba", "cijena": 7.96 },
+  { "naziv": "Filet od grgeča", "vrsta": "Ekstra obrađena riba", "cijena": 15.93 }
+]
+

@@ -6,8 +6,7 @@
     <meta
       name="description"
       content="Pogledajte našu ponudu slatkovodne i morske ribe. 
-    U ponudi je i ekstra obrađena riba već spremna za pripremu u kuhinji"
-    />
+    U ponudi je i ekstra obrađena riba već spremna za pripremu u kuhinji"/>
     <meta name="title" content="Ribarnica Kormoran" />
     <link rel="icon" href="slike/favicon.png" />
     <title>Cjenik</title>
@@ -38,10 +37,19 @@
         <div class="naslov">
           <h1 class="gl-naslov">Cjenik</h1>
           <br />
-          <h3 class="podnaslov">Pogledajte naše cijene</h3>
+          <h3 class="podnaslov">Pogledajte naše cijene i odaberite proizvode</h3>
         </div>
       </header>
       <main>
+        
+        <select id="pretraga">
+          <option value="0">Odaberite proizvod</option>
+            <option value="1">Po nazivu</option>
+            <option value="2">Po cijeni</option>
+            <option value="3">Po vrsti</option>
+          </select>
+        
+        <div id="proizvodi"></div>
         <div id="cjenik">
           <section id="slatkovodna">
             <h3>Slatkovodna riba</h3>
@@ -263,5 +271,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
