@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root{
     --primary-color: #667;
 }
@@ -430,7 +431,7 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
 }
 
 .blog-post {
@@ -438,17 +439,39 @@ main{
     margin-top: 2%;
     border-radius: 2.5%;
     padding: 2%;
-    box-shadow: 0 2px 6px 2px rgba(25, 25, 206, 0.2);
-    background-color: rgba(196, 196, 223, 0.2);
+    box-shadow: 0 2px 6px 2px rgba(25, 25, 206, 0.15);
+    /* background-color: rgba(196, 196, 223, 0.2); */   
+}
+
+.blog-post:hover{
+     transform: translateY(-5px);
+}
+
+.blog-post .naslov-posta {
+  position: relative;
+  bottom: 50%; /* Skriveno */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 30px 20px 0px;
+  font-size: 1.2em;
+  transition: bottom 0.9s ease, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.blog-post:hover .naslov-posta {
+  bottom: 20px; /* s dna */
+  opacity: 1;
 }
 
 .blog-img{
     border-radius: 2%;
-    transition: filter 0.9s ease;
 }
 
 .blog-img:hover {
-    filter: blur(2px)
+    filter: blur(1px);
+    
 }
 
 .blog-post-date {
@@ -458,6 +481,7 @@ main{
 .blog-post h3 {
     color: #801313;
     padding: 5px;
+    
 }
 
 .blog-post-desc {
@@ -620,19 +644,18 @@ footer{
 
 footer p{
     color: rgb(175, 202, 219);
-    text-align: center;
+    text-align: left;
     padding: 3%;
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 footer h3{
     color: white;
-    font-family: Helvetica, sans-serif;;
+    font-family: 'Roboto Condensed', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
     text-transform: uppercase;
-    background: rgba(25, 25, 206, 0.9);
-    padding: 2px 100px;
-    border-bottom: 1px solid white;;
-    border-radius: 5px;
+    padding: 3px 100px;
+    
 }
 
 .footer-radno-vrijeme span, .footer4 span, .o-nama-naslovna2 span {
