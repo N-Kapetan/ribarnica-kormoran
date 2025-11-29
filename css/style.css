@@ -92,6 +92,7 @@ main{
 .nav1 a:hover{
     color: rgb(20, 20, 2);
     background-color:rgb(203, 215, 229);
+    transition: all 0.4s linear;
     border: 1px solid black;
     border-radius: 10%;
 }
@@ -546,12 +547,11 @@ main{
     margin: 1.2% 48%;
     padding: 0.3%;
     width: 100px;
-    
     cursor: pointer;
 }
 
-.single-post h2, aside h3 {
-    color: #801313;
+.single-post h2 {
+    color: rgb(128, 19, 19);
 }
 
 time {
@@ -569,31 +569,68 @@ aside {
 }
 
 .aside-article{
+    position: relative;
+    overflow: hidden;
     text-align: center;
     width: 200px;
-    padding: 0 0 5px 0;
-    margin: 2%;
-    border: 1px solid #667;
+    height: auto;
+    margin: 7% 0; 
+    box-shadow: 0 2px 6px 2px rgba(94, 94, 134, 0.2); 
     border-radius: 2%;
 }
 
+.aside-article:hover{
+    transform: translateY(-5px);   /*---------------  pomiče gore za 5px ---------------------*/ 
+}
+
+
+
+.naslov-zadnji-postovi {
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6); /* određuje način i kut pojavljivanja slova */
+    opacity: 0;
+    filter: blur(8px);
+    background-color: rgba(128, 19, 19, 0.45);
+    padding: 2px 14px;   
+    color: #f7f4f4;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 6px;
+    transition:
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.45s ease,
+    filter 0.6s ease;
+    pointer-events: none;
+
+}
+
+
 .aside-article img{
-    padding-top: 12px;
+    padding-top: 1px;
     border-radius: 8%;
+    transition: transform 0.7s ease;
+}
+
+.aside-article:hover img {
+  transform: scale(1.07); /* ------ zumira sliku -------------*/
 }
 
 aside h3 {
     text-transform: uppercase;
     margin-bottom: 10%;
-    background-color:blue;
+    background-color:rgba(128, 19, 19, 0.45);
     color: white;
 }
 
-aside p {
-    color: white;
-    padding-top: 10px;
-    background-color:#1771F1;
-    border-radius: 2% 2% 0 0 ;
+
+
+.aside-article:hover .naslov-zadnji-postovi {
+  transform: translate(-50%, -50%) scale(1); /*---- povećava naslov i pozadinu ---------*/
+  opacity: 1;
+  filter: blur(0); /* ----- odmućuje pozadinu ----------*/
 }
 
 aside a{
@@ -720,7 +757,7 @@ footer h3{
 }
 
 .card-recepti:hover{
-    transform: translateY(-5px);   /*---------------  translate ---------------------*/ 
+    transform: translateY(-5px);   /*-------  translate pomicanje 5px prema gore-------------*/ 
 }
 
 .card-img{
@@ -840,10 +877,10 @@ footer h3{
 }
 
 #proizvodi{
-
     width: 30%;
     height: auto;
     margin: 2% 5%;
+    
 }
 
 #cjenik{
@@ -855,10 +892,12 @@ footer h3{
     grid-template-columns: repeat(3, 1fr);
 }
 
+
+
 #slatkovodna, #morska, #ekstra {
     margin: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0 ,0.2);
-
+   
 }
 
 .slatkovodna, .morska, .ekstra {
@@ -866,7 +905,7 @@ border: 1px solid rgba(181, 243, 238);
 border-radius: 3%;
 margin: 2%;
 padding: 2%;
-
+ 
 }
 
 
