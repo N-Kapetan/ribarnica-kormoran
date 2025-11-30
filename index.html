@@ -15,7 +15,10 @@
     <link rel="icon" href="slike/favicon.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/responzivni.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="page-layout">
@@ -46,8 +49,8 @@
         <!-- VELIKI IZBORNIK -->
         <section id="veliki-izbornik">
           <div class="big">
-          <!-- slatkovodna riba -->
-          
+            <!-- slatkovodna riba -->
+
             <a href="cjenik.html#slatkovodna-riba">
               <div class="big-thumbnail">
                 <img
@@ -222,7 +225,8 @@
             </p>
           </div>
           <div class="footer-osnovni-podaci">
-            <h3>Osnovni podaci</h3> <br />
+            <h3>Osnovni podaci</h3>
+            <br />
             <p>
               Ribarnica "Kormoran"<br />
               Obrt za trgovinu na malo
@@ -264,5 +268,28 @@
         </div>
       </footer>
     </div>
+    <!-- java script kod za transformacije  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(
+          ".o-nama-naslovna1, .o-nama-naslovna2, .o-nama-naslovna3,.logo-naslov, .image-logo, .logo "
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          {
+            threshold: 0.2,
+          }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
   </body>
 </html>

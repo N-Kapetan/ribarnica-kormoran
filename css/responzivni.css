@@ -24,8 +24,6 @@
         flex-wrap: wrap; 
     }
 
-    /*----------------------------BLOG POST ----------------------------*/
-
     #single-post-wrap {
         flex-direction: column;
         justify-content: center;
@@ -55,7 +53,7 @@
 
     .aside-article{
        width: 150px;
-       height: 150px;
+       height: 110px;
     }
 
     .card-grid{
@@ -72,9 +70,48 @@
      grid-template-columns: repeat(2, 1fr);
 }
 
+/* -------------------------RECEPTI ---------------------*/
+.card-recepti .naslov-recepta {
+  bottom: 0%; /* Skriveno */
+  left: 0%;
+  transform: none !important;
+  font-size: 1em;
+  transition: none !important;
+  opacity: 1;
+
 }
 
+.naslov-zadnji-postovi {
+    left: 0%;
+    transform: none !important; /* određuje način i kut pojavljivanja slova */
+    opacity: 1;
+    filter: none !important;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 6px;
+    transition: none !important;
+    pointer-events: none;
+}
 
+}
+
+/*-------------------------------------------- MEDIA 992PX   -------------------------*/
+/*----------------------------blog post  ----------------------------*/
+
+@media (max-width: 992px) {
+.blog-post .naslov-posta {
+    bottom: 0;           /* vrati ga na normalnu poziciju */
+    opacity: 1;          /* uvijek vidljiv */
+    transition: none;    /* isključi animacije */
+    transform: translateX(-50%) translateY(0); /* stabilna pozicija */
+    pointer-events: auto;
+  }
+
+  .vise{
+    display: none;
+  }
+
+  }
 
 /*----------------------------------------------- MEDIA 750PX -------------------------*/
 
@@ -163,6 +200,7 @@
         height: 150px;;
     }
 
+
     .blog-img{
         width: 70%;
         height: 40%;   
@@ -175,6 +213,13 @@
     .vise {
         font-size: 80%;
     }
+
+   .blog-post .naslov-posta {
+    padding: 20px 0px 0px;
+    font-size: 1em;
+    
+  }
+ 
 
     /*-------------------------- BLOG POST ----------------------*/
     .single-post {

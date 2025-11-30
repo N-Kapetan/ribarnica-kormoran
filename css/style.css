@@ -47,6 +47,24 @@ main{
     margin-top: 5px;
 }
 
+img {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomFade 1.2s ease-out /* stil ubrzanja i usporavanja */  forwards /* zadržava završno stanje */;
+}
+
+@keyframes zoomFade /* definicija animacije */{
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
 /* glavna navigacija */ 
 .main-nav{
     position: sticky;
@@ -102,6 +120,20 @@ main{
     border: rgba(219, 175, 181, 0.3);
 }
 
+/*----logo animacija ---*/
+/* početno stanje prije pojave */
+.logo {
+  opacity: 0;
+  transform: rotate(-12deg) scale(0.9);
+  transition: all 1s ease;
+}
+
+/* stanje nakon pojave na ekranu */
+.logo.show {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
 /* LOGO I NASLOV */
 
 .logo-naslov{
@@ -121,6 +153,62 @@ main{
     padding: 3% 0;
     font-weight: 900; /* ne radi */
     text-transform: uppercase;
+}
+
+
+/* class naslov css animacija - zumiranje naslova */
+.naslov {
+  opacity: 9;
+  transform: scale(0.6) translateY(20px);
+  animation: zoomInDepth 1.2s ease-out forwards;
+}
+
+@keyframes zoomInDepth {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(0);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+
+
+
+
+/* animacija povezaba s java scriptom */
+/* početno stanje logo i naslov */
+.logo-naslov,
+.image-logo {
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+/* različite početne animacije /*
+/* tekst naslova klizi odozdo nagore */
+.logo-naslov{
+  transform: translateY(40px);
+}
+
+/* logo se približava laganim zoom-in efektom */
+.image-logo {
+  transform: scale(0.8);
+}
+
+/* završno stanje kada se pojave */
+.logo-naslov.show,
+.image-logo.show {
+  opacity: 1;
+  transform: none; /* vrati sve u normalan položaj */
 }
 
 /* VELIKI IZBORNIK */
@@ -255,6 +343,43 @@ main{
  #o-nama-nsl a:hover, .footer-kontakt a:hover, .kontakt a:hover{
     background-color: #1771F1;
  }
+
+/* povezano sa java scriptom animacijski efekti */
+/* Kako radi?
+Observer “gleda” kada se elementi pojave barem 20% na ekranu (threshold 0.2).
+U tom trenutku doda im klasu .show.
+CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/  
+
+.o-nama-naslovna1,
+.o-nama-naslovna2,
+.o-nama-naslovna3 {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+/* lijevi slide-in */
+.o-nama-naslovna1 {
+  transform: translateX(-60px);
+}
+
+/* lagani scale-in */
+.o-nama-naslovna2 {
+  transform: scale(1.5);
+}
+
+/* lagani tilt/rotate */
+.o-nama-naslovna3 {
+  transform: rotate(-4deg) translateY(40px);
+}
+
+.o-nama-naslovna1.show,
+.o-nama-naslovna2.show,
+.o-nama-naslovna3.show {
+  opacity: 1;
+  transform: none;   /* vraća sve u normalu */
+}
+
+
 /* IZ BLOGA */
 
 #iz-bloga{
@@ -441,7 +566,7 @@ main{
     border-radius: 2.5%;
     padding: 2%;
     box-shadow: 0 2px 6px 2px rgba(25, 25, 206, 0.15);
-    /* background-color: rgba(196, 196, 223, 0.2); */   
+      
 }
 
 .blog-post:hover{
@@ -583,8 +708,6 @@ aside {
     transform: translateY(-5px);   /*---------------  pomiče gore za 5px ---------------------*/ 
 }
 
-
-
 .naslov-zadnji-postovi {
     position: absolute;
     width: 95%;
@@ -600,13 +723,11 @@ aside {
     text-align: center;
     border-radius: 6px;
     transition:
-    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), /* započinje polako, ubrza u sredini i uspori na kraju */
     opacity 0.45s ease,
     filter 0.6s ease;
     pointer-events: none;
-
 }
-
 
 .aside-article img{
     padding-top: 1px;
@@ -624,8 +745,6 @@ aside h3 {
     background-color:rgba(128, 19, 19, 0.45);
     color: white;
 }
-
-
 
 .aside-article:hover .naslov-zadnji-postovi {
   transform: translate(-50%, -50%) scale(1); /*---- povećava naslov i pozadinu ---------*/
@@ -798,7 +917,7 @@ footer h3{
   font-size: 1.2em;
   transition: bottom 0.4s ease, opacity 0.4s ease;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; /* Element potpuno ignorira sve interakcije, klik prolazi kroz njega na element ispod */
 }
 
 .card-recepti:hover .naslov-recepta {
