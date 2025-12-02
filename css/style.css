@@ -64,8 +64,8 @@ img {
   }
 }
 
-
 /* glavna navigacija */ 
+
 .main-nav{
     position: sticky;
     top: 0px;
@@ -85,7 +85,7 @@ img {
 
 .main-nav a{
     color: white;
-    width: 100px;
+    width: 102px;
     text-align: center;
     border: 1px solid white;
     border-radius: 5px;;
@@ -118,6 +118,19 @@ img {
 .nav1 a:focus{
     color: rgb(20, 20, 2);
     border: rgba(219, 175, 181, 0.3);
+}
+
+.nav1 a[rel="istaknuto"]{
+    color: black;
+    background-color: white;
+          
+}
+
+.nav1 a:hover[rel="istaknuto"] {
+    
+    background-color:rgb(203, 215, 229);
+    transition: all 0.4s linear;
+    
 }
 
 /*----logo animacija ---*/
@@ -180,10 +193,6 @@ img {
     filter: blur(0px);
   }
 }
-
-
-
-
 
 /* animacija povezaba s java scriptom */
 /* početno stanje logo i naslov */
@@ -321,7 +330,7 @@ img {
     font-size: 1,5em;
     text-align: center;
     padding: 1%;
-    background: rgba(25, 25, 206, 0.9);
+    background: rgba(52, 122, 181, 1);
     border-radius: 5px;
 }
 
@@ -341,7 +350,7 @@ img {
 }
 
  #o-nama-nsl a:hover, .footer-kontakt a:hover, .kontakt a:hover{
-    background-color: #1771F1;
+    background-color: rgba(52, 122, 181, 1);
  }
 
 /* povezano sa java scriptom animacijski efekti */
@@ -396,7 +405,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
     text-align: center;
     border: 1px solid white;
     padding: 5px;
-    background: rgba(25, 25, 206, 0.9);
+    background: rgba(52, 122, 181, 1);
 }
 
 .iz-bloga{
@@ -469,7 +478,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
 .iz-bloga .card .content h3{
     position: relative;
     font-size: 1.25em;
-    color: #801313;
+    color: #b56f34;
 }
 
 .iz-bloga .card .content h3 span{
@@ -605,7 +614,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
 }
 
 .blog-post h3 {
-    color: #801313;
+    color: #b56f34;
     padding: 5px;
     
 }
@@ -615,7 +624,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
 }
 
 .vise {
-    color: #801313;
+    color: #b56f34;
     text-transform: uppercase;
 }
 
@@ -676,7 +685,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
 }
 
 .single-post h2 {
-    color: rgb(128, 19, 19);
+    color: #b56f34;
 }
 
 time {
@@ -716,7 +725,7 @@ aside {
     transform: translate(-50%, -50%) scale(0.6); /* određuje način i kut pojavljivanja slova */
     opacity: 0;
     filter: blur(8px);
-    background-color: rgba(128, 19, 19, 0.45);
+    background-color: rgba(181, 111, 52, 0.45);
     padding: 2px 14px;   
     color: #f7f4f4;
     font-size: 1.1em;
@@ -840,12 +849,12 @@ footer h3{
     padding: 10px 16px;
     border-radius: 6px;
     border: none;
-    background-color: rgba(181, 243, 238, 0.7);
+    background-color: rgba(135, 181, 220, 0.35);
     cursor: pointer;
 }
 
 .filters button:hover, .filters .active{
-    background-color: blue;
+    background-color: rgba(52, 122, 181, 1);
     color: white;
 }
 
