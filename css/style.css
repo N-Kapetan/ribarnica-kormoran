@@ -31,8 +31,70 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    position: relative;
+    background-color: white;
+    left: 0px;
 }
 
+#page-layout.active {
+    left: -200px;
+}
+
+/*----------------------- hamburger meni ############################################---------------------*/
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    background-color: rgba(52, 122, 181, 1);
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 3rem 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 10;
+}
+
+.mobile-nav ul{
+    margin: 0;
+    padding: 25px;
+}
+
+.mobile-nav ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.mobile-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 1.2em;
+    
+}
+
+/* ########################################################## /*
 /* HEADER */
 #header-naslovna{
     background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
@@ -132,6 +194,7 @@ img {
     transition: all 0.4s linear;
     
 }
+
 
 /*----logo animacija ---*/
 /* početno stanje prije pojave */
@@ -273,11 +336,11 @@ img {
     color: var(--primary-color);
 }
 .big-title h3:hover, .vise a:hover{
-    color: red;
+    color: #347ab5;
 }
 
 .big a:focus, .blog-post a:focus{
-    color: red; 
+    color: #347ab5; 
 }
 
 /* O NAMA NA NASLOVNOJ STRANICI */

@@ -93,6 +93,27 @@
     pointer-events: none;
 }
 
+
+}
+
+/*--------------------------------------------MEDIA 800px----------------------------*/
+
+/* ---------------- hamburger menu----------------*/
+@media (max-width: 800px) {
+
+.nav1 { 
+    display: none;
+}
+
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.mobile-nav {
+    display: block;
+}
 }
 
 /*-------------------------------------------- MEDIA 992PX   -------------------------*/

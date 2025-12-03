@@ -13,6 +13,19 @@
     
   </head>
   <body>
+    <div class="menu-overlay"></div>
+    <!------- mobilna navigacija ##########################------------>
+        <div class="mobile-nav">
+          <ul>
+            <li><a href="index.html" rel="prozirno">Naslovna</a></li>
+            <li><a href="o-nama.html" rel="istaknuto">O nama</a></li>
+            <li><a href="cjenik.html" rel="prozirno">Cjenik</a></li>
+            <li><a href="blog.html" rel="prozirno">Blog</a></li>
+            <li><a href="recepti.html" rel="prozirno">Recepti</a></li>
+            <li><a href="kontakt.html" rel="prozirno">Kontakt</a></li>
+          </ul>
+        </div>
+
     <div id="page-layout">
       <header class="header-naslovna">
         <!-- NAVIGACIJA -->
@@ -37,6 +50,11 @@
           <h1 class="gl-naslov">Kontakt</h1>
           <br />
           <h3 class="podnaslov">Javite nam se</h3>
+        </div>
+
+        <!--- hamburger meni -->
+        <div class="hamburger-menu">
+          <img src="slike/hambuger-icon.svg" alt="icon-menu">
         </div>
       </header>
       <main>
@@ -206,5 +224,7 @@
         elements.forEach((el) => observer.observe(el));
       });
     </script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
