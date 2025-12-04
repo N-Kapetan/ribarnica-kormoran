@@ -424,29 +424,39 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
 
 .o-nama-naslovna1,
 .o-nama-naslovna2,
-.o-nama-naslovna3 {
+.o-nama-naslovna3,
+.footer-radno-vrijeme,
+.footer-osnovni-podaci,
+.footer-kontakt {
   opacity: 0;
   transition: all 0.9s ease;
 }
 
 /* lijevi slide-in */
-.o-nama-naslovna1 {
+.o-nama-naslovna1,
+.footer-radno-vrijeme {
   transform: translateX(-60px);
 }
 
 /* lagani scale-in */
-.o-nama-naslovna2 {
+.o-nama-naslovna2,
+.footer-osnovni-podaci {
   transform: scale(1.5);
 }
 
 /* lagani tilt/rotate */
-.o-nama-naslovna3 {
+.o-nama-naslovna3,
+.footer-kontakt {
   transform: rotate(-4deg) translateY(40px);
 }
 
 .o-nama-naslovna1.show,
 .o-nama-naslovna2.show,
-.o-nama-naslovna3.show {
+.o-nama-naslovna3.show,
+ .footer-radno-vrijeme.show,
+ .footer-osnovni-podaci.show,
+.footer-kontakt.show
+ {
   opacity: 1;
   transform: none;   /* vraća sve u normalu */
 }
