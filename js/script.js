@@ -1,28 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".filters button"); /*JavaScript metoda koja služi za dohvaćanje svih elemenata u dokumentu koji odgovaraju nekom CSS selektoru. */
-  const recepti = document.querySelectorAll(".card-grid article");
+  const buttons = document.querySelectorAll(".filters button");
+  const recepti = document.querySelectorAll(".card-grid article"); /*JavaScript metoda koja služi za dohvaćanje svih elemenata u dokumentu koji odgovaraju nekom CSS selektoru.*/
+  const poruka = document.getElementById("nema-recepata");
 
   buttons.forEach(button => {
-    button.addEventListener("click", () => {   /*pokreni funkciju kada se dogodi neki događaj - klik na gumb */
+    button.addEventListener("click", () => {
       const kategorija = button.getAttribute("data-kategorija");
 
-      // Ukloni 'active' klasu sa svih gumba
-      buttons.forEach(btn => btn.classList.remove("active"));
+      // Ukloni 'active' sa svih gumba
+      buttons.forEach(btn => btn.classList.remove("active"));  /*pokreni funkciju kada se dogodi neki događaj - klik na gumb */
       button.classList.add("active");
+
+      let vidljivih = 0; // brojat ćemo koliko je recepata prikazano
 
       //filtracija
       recepti.forEach(recept => {
-        if (kategorija === "sve") {
+        if (kategorija === "sve" || recept.classList.contains(kategorija)) {
           recept.style.display = "block";
-        } else if (recept.classList.contains(kategorija)) {
-          recept.style.display = "block";
+          vidljivih++;
         } else {
           recept.style.display = "none";
         }
       });
+
+      // Prikaži/skrij poruku ako nema rezultata
+      if (vidljivih === 0) {
+        poruka.style.display = "block";
+      } else {
+        poruka.style.display = "none";
+      }
     });
   });
 });
+
+
 
 
 /*------------------------------------------- pretraga po tagu---------------------------------*/

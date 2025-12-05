@@ -897,6 +897,13 @@ aside a{
 
 }
 
+#nema-recepata{
+    display:none; 
+    text-align:left; 
+    padding:20px; 
+    font-size:1 em;
+}
+
 .card-recepti{
     width: 100%;
     position: relative;
