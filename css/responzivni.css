@@ -93,6 +93,9 @@
     pointer-events: none;
 }
 
+.karta iframe {
+    height: 250px;
+  }
 
 }
 
@@ -215,6 +218,7 @@
         flex-direction: column;
     }
 
+    
     /*---------------------------- BLOG --------------------------------*/
     .blog-post {
         width: 150px;

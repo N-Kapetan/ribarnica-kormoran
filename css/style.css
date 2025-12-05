@@ -412,6 +412,20 @@ img {
     color:#e47d7d
 }
 
+.karta {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+}
+
+.karta iframe {
+  width: 100%;
+  height: 450px;        
+  border: 0;
+  border-radius: 8px; 
+}
+
  #o-nama-nsl a:hover, .footer-kontakt a:hover, .kontakt a:hover{
     background-color: rgba(52, 122, 181, 1);
  }
@@ -838,71 +852,7 @@ aside a{
     text-decoration-line: none;
 }
 
-/*  FOOTER */
 
-footer{
-    color: white;
-    text-align: center;
-    padding: 20px 0px;
-    background: url("../slike/footer_bg.jpg") no-repeat fixed center center/cover;
-}
-
-.footer-container{
-    margin: 0px auto;  
-    padding: 2%;
-    display: flex;
-    align-content: center;
-}
-
-.footer-radno-vrijeme{
-    width: 400px;
-    margin: 1% auto;
-    text-align: center;
-    border-bottom: 1px solid white;
-}
-
-.footer-osnovni-podaci{
-    width: 400px;
-    margin: 1% auto;
-    text-align: center;
-    border-bottom: 1px solid white;
-}
-
-.footer-kontakt{
-    width: 400px;
-    margin: 1% auto;
-    text-align: center;
-    border-bottom: 1px solid white; 
-}
-
-.footer-copyright{
-    padding: 15px;
-    background: rgba(44, 39, 39, 0.5);
-}
-
-footer p{
-    color: rgb(175, 202, 219);
-    text-align: left;
-    padding: 3%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
-}
-
-footer h3{
-    color: white;
-    font-family: 'Roboto Condensed', Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    text-transform: uppercase;
-    padding: 3px 100px;
-    
-}
-
-.footer-radno-vrijeme span, .footer4 span, .o-nama-naslovna2 span {
-    color: white; 
-}
-
-.facebook-logo{
-   border-radius: 5px;
-}
 
 /*-------------------------------------------------- recepti ----------------------------------------*/
 
@@ -1063,25 +1013,21 @@ footer h3{
     width: 30%;
     height: auto;
     background: rgb(161, 13, 13);
-
 }
 
 #pretraga{
-    
     background: rgb(232, 237, 238);
     margin-top: 2%;
     margin-left: 6%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    
+    grid-template-columns: repeat(3, 1fr);   
 }
 
 #proizvodi{
     width: 30%;
     height: auto;
-    margin: 2% 5%;
-    
+    margin: 2% 5%; 
 }
 
 #cjenik{
@@ -1093,12 +1039,9 @@ footer h3{
     grid-template-columns: repeat(3, 1fr);
 }
 
-
-
 #slatkovodna, #morska, #ekstra {
     margin: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0 ,0.2);
-   
 }
 
 .slatkovodna, .morska, .ekstra {
@@ -1106,6 +1049,72 @@ border: 1px solid rgba(181, 243, 238);
 border-radius: 3%;
 margin: 2%;
 padding: 2%;
+}
+
+/*  -----------------------------------FOOTER------------------------------- */
+
+footer{
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    background: url("../slike/footer_bg.jpg") no-repeat fixed center center/cover;
+}
+
+.footer-container{
+    margin: 0px auto;  
+    padding: 2%;
+    display: flex;
+    align-content: center;
+}
+
+.footer-radno-vrijeme{
+    width: 400px;
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.footer-osnovni-podaci{
+    width: 400px;
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.footer-kontakt{
+    width: 400px;
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 1px solid white; 
+}
+
+.footer-copyright{
+    padding: 15px;
+    background: rgba(44, 39, 39, 0.5);
+}
+
+footer p{
+    color: rgb(175, 202, 219);
+    text-align: left;
+    padding: 3%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+footer h3{
+    color: white;
+    font-family: 'Roboto Condensed', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 3px 100px;
+    
+}
+
+.footer-radno-vrijeme span, .footer4 span, .o-nama-naslovna2 span {
+    color: white; 
+}
+
+.facebook-logo{
+   border-radius: 5px;
 }
 
 #na-vrh {
