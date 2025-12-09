@@ -134,67 +134,97 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 }); 
 
-/*--------------------------------- pretraga po nazivu ----------------------------*/
+/*--------------------------------- pretraga po nazivu cjenik----------------------------*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const trazilica = document.getElementById("trazilica");
     const proizvodiPoNazivu = document.getElementById("proizvodi-po-nazivu");
+
+    // mapa naziva → id sidra na stranici
     const idMapa = {
-    "Amur": "amur",
-    "Šaran": "saran",
-    "Som": "som",
-    "Smuđ": "smud",
-    "Štuka": "stuka",
-    "Tolstolobik": "tolstolobik",
-    "Orada": "orada",
-    "Brancin": "brancin"}
+        "Amur": "amur",
+        "Šaran": "saran",
+        "Som": "som",
+        "Smuđ": "smud",
+        "Štuka": "stuka",
+        "Tolstolobik": "tolstolobik",
+        "Orada": "orada",
+        "Brancin": "brancin",
+        "Hobotnica": "hobotnica",
+        "Lignja": "lignja",
+        "Tuna": "tuna",
+        "Srdela": "srdela",
+        "Šaranove potkove": "saranovePotkove",
+        "Odresci od šarana": "odresciOdSarana",
+        "Filet od smuđa": "filetOdSmuda",
+        "Odresci od tolstolobika": "odresciOdTolstolobika",
+        "Odresci od amura": "odresciOdAmura",
+        "Filet od grgeča": "filetOdGrgeca"
+    };
 
     let sviProizvodi = [];
 
-    // --- 1. Učitaj JSON samo jednom ---
+    // 1) Učitaj JSON samo jednom
     fetch("proizvodi.json")
         .then(res => res.json())
         .then(data => {
-            sviProizvodi = data;    // spremi sve proizvode
+            sviProizvodi = data;
             console.log("Učitano:", sviProizvodi);
         });
 
-
-    // --- 2. Reakcija na tipkanje ---
+    // 2) Reakcija na tipkanje
     trazilica.addEventListener("keyup", () => {
 
         const vrijednost = trazilica.value.trim().toLowerCase();
 
-        if (vrijednost === "") {
+        if (!vrijednost) {
             proizvodiPoNazivu.innerHTML = "";
             return;
         }
 
-        // --- 3. Filtriraj proizvode ---
+        // 3) Filtriraj proizvode po nazivu
         const filtrirano = sviProizvodi.filter(p =>
             p.naziv.toLowerCase().includes(vrijednost)
         );
 
-        // --- 4. Prikaz ---
+        // 4) Prikaz tablice
         if (filtrirano.length > 0) {
 
-            let table = `<table border="1">
-                            <tr><th>Naziv</th><th>Vrsta</th><th>Cijena</th></tr>`;
+            let podaci = `
+            <table class="rezultati-tablica">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Vrsta</th>
+                        <th>Cijena</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
 
             filtrirano.forEach(p => {
-                table += `<tr>
-                            <td>${p.naziv}</td>
-                            <td>${p.vrsta}</td>
-                            <td>${p.cijena}</td>
-                          </tr>`;
+                const anchor = idMapa[p.naziv] ? `#${idMapa[p.naziv]}` : "#";
+
+                podaci += `
+                    <tr>
+                        <td>${p.naziv}</td>
+                        <td>${p.vrsta}</td>
+                        <td>${p.cijena} €/kg</td>
+                        <td><a href="${anchor}" class="sidro-link">Idi na sekciju</a></td>
+                    </tr>
+                `;
             });
 
-            table += `</table>`;
-            proizvodiPoNazivu.innerHTML = table;
+            podaci += `
+                </tbody>
+            </table>
+            `;
+
+            proizvodiPoNazivu.innerHTML = podaci;
 
         } else {
-
             proizvodiPoNazivu.innerHTML =
                 `<h3>Nisu pronađeni podaci niti o jednom artiklu</h3>`;
         }

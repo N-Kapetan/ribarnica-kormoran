@@ -1053,9 +1053,51 @@ aside a{
 }
 
 .slatkovodna, .morska, .ekstra {
-    border-radius: 3%;
-    margin: 2%;
-    padding: 2%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09)
+    
+}
+
+.slatkovodna img, .morska img, .ekstra img{
+    width: 160px;
+    height: auto;
+    
+}
+
+.slatkovodna h5, .morska h5, .ekstra h5{ 
+    margin: 0 0 6px;
+    font-size: 1em;
+    display: block;
+}
+
+.slatkovodna p, .morska p, .ekstra p {
+    margin: 0 0  8px 0;
+    line-height: 1.5;
+    
+}
+
+.pozadina-cjenik1, .pozadina-cjenik2, .pozadina-cjenik3 {
+    color: white;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
+    url("../slike/cjenik/category-slatkovodna.jpg") no-repeat scroll center center/cover;
+    text-align:left;
+    padding-top: 30px;
+    border-radius: 8px;
+}
+
+.pozadina-cjenik2{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
+    url("../slike/cjenik/category-morska.jpg") no-repeat scroll center center/cover;
+}
+
+.pozadina-cjenik3{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
+    url("../slike/cjenik/category-ekstra.jpg") no-repeat scroll center center/cover;
 }
 
 #slatkovodna > img, #morska > img, #ekstra > img {
@@ -1120,7 +1162,6 @@ footer{
     margin: 1% auto;
     text-align: center;
     border-bottom: 1px solid rgb(82, 66, 66); 
-    
 }
 
 .footer-copyright{
@@ -1174,7 +1215,39 @@ footer h3{
 
 
 
+/******************************** cjenik tablica --------------------------------*/
 
+
+.rezultati-tablica {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.rezultati-tablica th,
+.rezultati-tablica td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.rezultati-tablica thead {
+    background: #f3f3f3;
+}
+
+.rezultati-tablica tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.sidro-link {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidro-link:hover {
+    text-decoration: underline;
+}
 
 
 
