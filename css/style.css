@@ -28,7 +28,7 @@ body{
 } 
 
 #page-layout{
-    display: grid;
+    display: grid
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     position: relative;
@@ -1022,13 +1022,14 @@ aside a{
     background: rgb(161, 13, 13);
 }
 
-#pretraga{
+#pretraga, #pretraga-po-nazivu{
     background: rgb(232, 237, 238);
+    height: 30%;
     margin-top: 2%;
     margin-left: 6%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);   
+     
 }
 
 #proizvodi {
@@ -1060,11 +1061,8 @@ aside a{
 #slatkovodna > img, #morska > img, #ekstra > img {
     display: block;
     margin: 0 auto;
-    
     margin-bottom: 90px;
     max-width: 100%;
-    
-  
 }
 
 #slatkovodna > h3, #morska > h3, #ekstra > h3 {
@@ -1075,6 +1073,15 @@ aside a{
     font-weight: 300;
     letter-spacing: 3px;
     font-size: 1.2em;
+
+}
+
+#pretrage{
+    width: 100px;
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 4%;
 
 }
 
@@ -1098,21 +1105,22 @@ footer{
     width: 400px;
     margin: 1% auto;
     text-align: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(82, 66, 66);
 }
 
 .footer-osnovni-podaci{
     width: 400px;
     margin: 1% auto;
     text-align: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(82, 66, 66);
 }
 
 .footer-kontakt{
     width: 400px;
     margin: 1% auto;
     text-align: center;
-    border-bottom: 1px solid white; 
+    border-bottom: 1px solid rgb(82, 66, 66); 
+    
 }
 
 .footer-copyright{
@@ -1132,8 +1140,7 @@ footer h3{
     font-family: 'Roboto Condensed', Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
     text-transform: uppercase;
-    padding: 3px 100px;
-    
+    padding: 3px 100px; 
 }
 
 .footer-radno-vrijeme span, .footer4 span, .o-nama-naslovna2 span {

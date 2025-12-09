@@ -38,25 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*------------------------------------------- pretraga po tagu---------------------------------*/
 
- /* document.addEventListener("DOMContentLoaded", () => {
-  const pretraga = document.getElementById("pretraga");
-  const proizvodi = document.getElementById("proizvodi");
-
+/*
   //definicija funkcije za rukovanje podacima
   const rukujPodacima = function(podaci) {
     var ispis = "", 
-      nazivProizvoda,
-      vrstaProizvoda,
-      cijenaProizvoda;
+      naziv,
+      vrsta,
+      cijena;
 
       for(let i = 0; i < podaci.length; i++) {
-        nazivProizvoda = podaci[i].nazivProizvoda;
-        vrstaProizvoda = podaci[i].vrstaProizvoda;
-        cijenaProizvoda = podaci[i].cijenaProizvoda;
+        naziv = podaci[i].naziv;
+        vrsta = podaci[i].vrsta;
+        cijena = podaci[i].cijena;
+        console.log(`${naziv}, ${vrsta}, ${cijena}`);
 
-        ispis += `<p><strong>Naziv proizvoda: </strong>${nazivProizvoda}
-        <br><strong>Vrsta proizvoda:</strong> ${vrstaProizvoda}
-        <br><strong>cijenaProizvoda:</strong> ${cijenaProizvoda} €/kg<p><hr>`;
+        ispis += `<p><strong>Naziv proizvoda: </strong>${naziv}
+        <br><strong>Vrsta proizvoda:</strong> ${vrsta}
+        <br><strong>cijenaProizvoda:</strong> ${cijena} €/kg<p><hr>`;
       }
       proizvodi.innerHTML = ispis;
   };
@@ -79,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-}); */
+});  */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const pretraga = document.getElementById("pretraga");
@@ -120,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const ucitajProizvode = function(filterTip) {
-    fetch("proizvodi.json")
+    fetch("https://kormoran-3650c-default-rtdb.europe-west1.firebasedatabase.app/.json")
       .then(response => response.json())
       .then(podaci => rukujPodacima(podaci, filterTip))
       .catch(error => rukujGreskom(error));
@@ -133,4 +132,73 @@ document.addEventListener("DOMContentLoaded", () => {
   pretraga.addEventListener("change", function() {
     ucitajProizvode(pretraga.value);
   });
+}); 
+
+/*--------------------------------- pretraga po nazivu ----------------------------*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const trazilica = document.getElementById("trazilica");
+    const proizvodiPoNazivu = document.getElementById("proizvodi-po-nazivu");
+    const idMapa = {
+    "Amur": "amur",
+    "Šaran": "saran",
+    "Som": "som",
+    "Smuđ": "smud",
+    "Štuka": "stuka",
+    "Tolstolobik": "tolstolobik",
+    "Orada": "orada",
+    "Brancin": "brancin"}
+
+    let sviProizvodi = [];
+
+    // --- 1. Učitaj JSON samo jednom ---
+    fetch("proizvodi.json")
+        .then(res => res.json())
+        .then(data => {
+            sviProizvodi = data;    // spremi sve proizvode
+            console.log("Učitano:", sviProizvodi);
+        });
+
+
+    // --- 2. Reakcija na tipkanje ---
+    trazilica.addEventListener("keyup", () => {
+
+        const vrijednost = trazilica.value.trim().toLowerCase();
+
+        if (vrijednost === "") {
+            proizvodiPoNazivu.innerHTML = "";
+            return;
+        }
+
+        // --- 3. Filtriraj proizvode ---
+        const filtrirano = sviProizvodi.filter(p =>
+            p.naziv.toLowerCase().includes(vrijednost)
+        );
+
+        // --- 4. Prikaz ---
+        if (filtrirano.length > 0) {
+
+            let table = `<table border="1">
+                            <tr><th>Naziv</th><th>Vrsta</th><th>Cijena</th></tr>`;
+
+            filtrirano.forEach(p => {
+                table += `<tr>
+                            <td>${p.naziv}</td>
+                            <td>${p.vrsta}</td>
+                            <td>${p.cijena}</td>
+                          </tr>`;
+            });
+
+            table += `</table>`;
+            proizvodiPoNazivu.innerHTML = table;
+
+        } else {
+
+            proizvodiPoNazivu.innerHTML =
+                `<h3>Nisu pronađeni podaci niti o jednom artiklu</h3>`;
+        }
+
+    });
+
 });
