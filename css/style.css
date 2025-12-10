@@ -600,8 +600,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    
+    align-items: center;  
 }
 
 .naslov{
@@ -1120,7 +1119,7 @@ aside a{
 
 #pretrage{
     width: 100px;
-    display: inline-flex;
+    display: flex;
     gap: 10px;
     margin-top: 30px;
     margin-left: 7%;

@@ -218,6 +218,21 @@
         flex-direction: column;
     }
 
+    /*---------------------------------------- cjenik --------------------------*/
+
+
+    #pretrage{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+    #pretraga, #pretraga-po-nazivu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+}
+
+
     
     /*---------------------------- BLOG --------------------------------*/
     .blog-post {
@@ -251,6 +266,8 @@
     max-width: 100%;
     }
 
+
+
     /*------------------------------ O NAMA ------------------------------ */
     .o-nama-kontakt{
         width: 50%;
@@ -270,11 +287,44 @@
         width: auto;
     }
 
-.card-grid{
-    grid-template-columns: repeat(1, 1fr);
+    .card-grid{
+        grid-template-columns: repeat(1, 1fr);
+}
+
+/* footer */
+
+
+.footer-kontakt {
+  opacity: 0;
+  transition: none;
+}
+
+/* lijevi slide-in */
+
+.footer-radno-vrijeme {
+  transform: none;
+}
+
+/* lagani scale-in */
+
+.footer-osnovni-podaci {
+  transform: none;
+}
+
+/* lagani tilt/rotate */
+
+.footer-kontakt {
+  transform: none;
 }
 
 
+ .footer-radno-vrijeme.show,
+ .footer-osnovni-podaci.show,
+.footer-kontakt.show
+ {
+  opacity: none;
+  
+}
 
 }  
 
@@ -282,27 +332,49 @@
 @media (max-width: 596px){
 
     .filters{
-    display: flex;
-    flex-direction:column;
-    gap: 12px;
-    text-align: left;
-    justify-content: flex-start;;
-    height: auto;
-    margin: 30px;
-    flex-wrap: wrap;
+        display: flex;
+        flex-direction:column;
+        gap: 12px;
+        text-align: left;
+        justify-content: flex-start;;
+        height: auto;
+        margin: 30px;
+        flex-wrap: wrap;
 
 }
 
     .big-thumbnail img{
         width: 50%;
     }  
-    
+
+/*---------------------------------------- cjenik --------------------------*/
+
+    #pretrage{
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: 1%;
+}
+
+    #pretraga, #pretraga-po-nazivu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+}
+
+    .rezultati-tablica {
+        font-size: 0.9rem;
+}
+
     #cjenik{
-     grid-template-columns: repeat(1, 1fr);
-}
+        grid-template-columns: repeat(1, 1fr);
 }
 
 
-@media (max-width: 550){
+
+
+
 
 }
+
+
+
