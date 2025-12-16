@@ -1,24 +1,3 @@
-/*$(document).ready(function(){
-
-  $('.hamburger-menu').click(function(event){
-    event.stopPropagation();
-    if ($('page-layout').hasClass('active')){
-      $('page-layout').removeClass('active');
-    } else {
-      $('page-layout').addClass('active');
-    }
-  });
-
-  $('page-layout').click(function(){
-    $('page-layout').removeClass('active');
-  });
-
-});
-
-$(document).ready(function() {
-    alert ("Hello");
-}); */
-
 
 const hamburger = document.querySelector('.hamburger-menu');
 const mobileNav = document.querySelector('.mobile-nav');

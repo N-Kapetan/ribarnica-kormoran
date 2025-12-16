@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       buttons.forEach(btn => btn.classList.remove("active"));  /*pokreni funkciju kada se dogodi neki događaj - klik na gumb */
       button.classList.add("active");
 
-      let vidljivih = 0; // brojat ćemo koliko je recepata prikazano
+      let vidljivih = 0; // Broji koliko je recepata trenutno prikazano
 
       //filtracija
       recepti.forEach(recept => {
@@ -38,47 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*------------------------------------------- pretraga po tagu---------------------------------*/
 
-/*
-  //definicija funkcije za rukovanje podacima
-  const rukujPodacima = function(podaci) {
-    var ispis = "", 
-      naziv,
-      vrsta,
-      cijena;
-
-      for(let i = 0; i < podaci.length; i++) {
-        naziv = podaci[i].naziv;
-        vrsta = podaci[i].vrsta;
-        cijena = podaci[i].cijena;
-        console.log(`${naziv}, ${vrsta}, ${cijena}`);
-
-        ispis += `<p><strong>Naziv proizvoda: </strong>${naziv}
-        <br><strong>Vrsta proizvoda:</strong> ${vrsta}
-        <br><strong>cijenaProizvoda:</strong> ${cijena} €/kg<p><hr>`;
-      }
-      proizvodi.innerHTML = ispis;
-  };
-
-  const rukujGreskom = function(error) {
-    proizvodi.innerHTML = `<p>Greška kod obrade zahtjeva: ${error}</p>`
-    
-  };
-
-  //funkcija za dohvaćanje podataka
-  pretraga.addEventListener("change", function(){
-    const vrijednost = pretraga.value; 
-    
-
-   fetch("proizvodi.json")
-
-      .then((odgovor) => odgovor.json())
-      .then(podaci => rukujPodacima(podaci))
-      .catch(error => rukujGreskom(error));
-
-  });
-
-});  */
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const pretraga = document.getElementById("pretraga");
@@ -104,12 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     filtrirani.forEach(item => {
-      ispis += `<p>
-        <strong>Naziv proizvoda:</strong> ${item.naziv}<br>
-        <strong>Vrsta proizvoda:</strong> ${item.vrsta}<br>
-        <strong>Cijena:</strong> ${item.cijena} €/kg
-      </p><hr>`;
-    });
+    ispis += `
+    <article class="rezultat">
+      <img src="${item.slika}" alt="${item.naziv}">
+      <div class="rezultat-tekst">
+        <h4>${item.naziv}</h4>
+        <p><strong>Vrsta:</strong> ${item.vrsta}</p>
+        <p><strong>Cijena:</strong> ${item.cijena} €/kg</p>
+      </div>
+    </article>
+  `;
+});
 
     proizvodi.innerHTML = ispis;
   };
@@ -195,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <table class="rezultati-tablica">
                 <thead>
                     <tr>
-                        <th>Naziv</th>
+                        <th><p>Naziv<p></th>
                         <th>Vrsta</th>
                         <th>Cijena</th>
                         <th>Link</th>
@@ -209,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 podaci += `
                     <tr>
-                        <td>${p.naziv}</td>
+                        <td class="naziv-tablica"><h2>${p.naziv} </h2></td>
                         <td>${p.vrsta}</td>
                         <td>${p.cijena} €/kg</td>
                         <td><a href="${anchor}" class="sidro-link">Idi na sekciju</a></td>
@@ -226,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
             proizvodiPoNazivu.innerHTML =
-                `<h3>Nisu pronađeni podaci niti o jednom artiklu</h3>`;
+                `<p>Nisu pronađeni podaci niti o jednom artiklu</p>`;
         }
 
     });

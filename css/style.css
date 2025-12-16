@@ -190,10 +190,20 @@ img {
 }
 
 .nav1 a:hover[rel="istaknuto"] {
-    
     background-color:rgb(203, 215, 229);
-    transition: all 0.4s linear;
+    transition: all 0.4s linear; 
+}
+
+.prijava-registarcija {
+    display: inline-flex;
+    position: relative;
+    bottom: 2px;
     
+    color: white;
+}
+
+.prijava-registarcija a {
+    color: white;
 }
 
 
@@ -1015,6 +1025,28 @@ aside a{
 }
 
 /* -------------------------------------------------- cjenik --------------------------------------------*/
+.rezultat {
+  display: flex;
+  gap: 15px;
+  width: 400px;
+  margin: 20px 0;
+  padding: 15px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  background: rgba(183, 210, 234 ,0.1);
+}
+
+.rezultat img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.rezultat-tekst h4 {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+}
+
 .izbornik{
     padding: 2% 0;
     width: 30%;
@@ -1023,13 +1055,17 @@ aside a{
 }
 
 #pretraga, #pretraga-po-nazivu{
-    background: rgb(232, 237, 238);
+    background: rgba(183, 210, 234 ,0.1);
     height: 30%;
     display: grid;
     justify-content: center; 
 }
 
 #proizvodi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 20px;
     width: 30%;
     height: auto;
     margin: 2% 5%; 
@@ -1059,9 +1095,9 @@ aside a{
     
 }
 
-.slatkovodna img, .morska img, .ekstra img{
+.slatkovodna img, .morska img, .ekstra img {
     width: 160px;
-    height: auto;
+    height: 160px;
     
 }
 
@@ -1133,10 +1169,17 @@ aside a{
     font-size: 1rem;
 }
 
+
+
 .rezultati-tablica th,
 .rezultati-tablica td {
     padding: 10px;
     border: 1px solid #ccc;
+    
+}
+
+.rezultati-tablica th p, .rezultati-tablica td p{
+    font-weight: 900;
 }
 
 
@@ -1239,6 +1282,11 @@ footer h3{
   opacity: 1;
   pointer-events: auto;
 }
+
+
+
+
+
 
 
 

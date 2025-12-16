@@ -1,3 +1,10 @@
+@media (max-width: 1350px) {
+.rezultat {
+    width: 350px;   
+}
+
+}
+
 @media (max-width: 1200px) {
     
     .main-nav a {
@@ -31,13 +38,13 @@
     }
 
     .single-post {
-    max-width: 60%;
-    height: auto;
-    margin: 2%; 
+        max-width: 60%;
+        height: auto;
+        margin: 2%; 
     }
         
     aside h3{
-    display: none;
+        display: none;
     }
 
     aside {
@@ -60,24 +67,36 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.recepti2, .recepti1{
+    .recepti2, .recepti1{
     max-width: 90%;
     margin: 2% 10%;
     grid-template-columns: repeat(1, 1fr);
 }
 
-#cjenik{
+    #cjenik{
      grid-template-columns: repeat(2, 1fr);
 }
 
+#proizvodi {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+.rezultat {
+    
+    box-shadow: none;
+    background: none;
+}
+
+
 /* -------------------------RECEPTI ---------------------*/
 .card-recepti .naslov-recepta {
-  bottom: 0%; /* Skriveno */
-  left: 0%;
-  transform: none !important;
-  font-size: 1em;
-  transition: none !important;
-  opacity: 1;
+    bottom: 0%; /* Skriveno */
+    left: 0%;
+    transform: none !important;
+    font-size: 1em;
+    transition: none !important;
+    opacity: 1;
 
 }
 
@@ -99,6 +118,24 @@
 
 }
 
+/*-------------------------------------------- MEDIA 992PX   -------------------------*/
+/*----------------------------blog post  ----------------------------*/
+
+@media (max-width: 992px) {
+.blog-post .naslov-posta {
+    bottom: 0;           /* vrati ga na normalnu poziciju */
+    opacity: 1;          /* uvijek vidljiv */
+    transition: none;    /* isključi animacije */
+    transform: translateX(-50%) translateY(0); /* stabilna pozicija */
+    pointer-events: auto;
+  }
+
+  .vise{
+    display: none;
+  }
+
+  }
+
 /*--------------------------------------------MEDIA 800px----------------------------*/
 
 /* ---------------- hamburger menu----------------*/
@@ -119,23 +156,6 @@
 }
 }
 
-/*-------------------------------------------- MEDIA 992PX   -------------------------*/
-/*----------------------------blog post  ----------------------------*/
-
-@media (max-width: 992px) {
-.blog-post .naslov-posta {
-    bottom: 0;           /* vrati ga na normalnu poziciju */
-    opacity: 1;          /* uvijek vidljiv */
-    transition: none;    /* isključi animacije */
-    transform: translateX(-50%) translateY(0); /* stabilna pozicija */
-    pointer-events: auto;
-  }
-
-  .vise{
-    display: none;
-  }
-
-  }
 
 /*----------------------------------------------- MEDIA 750PX -------------------------*/
 
@@ -220,6 +240,14 @@
 
     /*---------------------------------------- cjenik --------------------------*/
 
+    .rezultat {
+    width: 300px;
+  
+}
+
+    #proizvodi {
+    grid-template-columns: repeat(1, 1fr);
+  } 
 
     #pretrage{
     display: inline-flex;
@@ -232,8 +260,6 @@
         justify-content: center; 
 }
 
-
-    
     /*---------------------------- BLOG --------------------------------*/
     .blog-post {
         width: 150px;
@@ -340,7 +366,6 @@
         height: auto;
         margin: 30px;
         flex-wrap: wrap;
-
 }
 
     .big-thumbnail img{
