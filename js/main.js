@@ -4,7 +4,7 @@ const mobileNav = document.querySelector('.mobile-nav');
 const pageLayout = document.getElementById('page-layout');
 const overlay = document.querySelector('.menu-overlay');
 
-// Funkcija za otvaranje/zatvaranje menija
+// Funkcija za otvaranje/zatvaranje menija funkcijoj toggleMenu
 function toggleMenu() {
     mobileNav.classList.toggle('active');
     overlay.style.display = mobileNav.classList.contains('active') ? 'block' : 'none';

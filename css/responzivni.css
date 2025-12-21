@@ -1,6 +1,13 @@
-@media (max-width: 1350px) {
+@media (max-width: 1426px) {
 .rezultat {
     width: 350px;   
+}
+
+}
+
+@media (max-width: 1280px) {
+.rezultat {
+    width: 300px;   
 }
 
 }
@@ -83,7 +90,6 @@
 
 
 .rezultat {
-    
     box-shadow: none;
     background: none;
 }
@@ -119,6 +125,7 @@
 }
 
 /*-------------------------------------------- MEDIA 992PX   -------------------------*/
+
 /*----------------------------blog post  ----------------------------*/
 
 @media (max-width: 992px) {

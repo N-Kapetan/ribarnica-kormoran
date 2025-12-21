@@ -1,16 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* širina i visina uključeni u sadržaj */
 }
 
 
 :root{
-    --primary-color: #667;
-}
-
-h1, h2, h3, h4, h5, h6, p, font1{
-    font-size: 1em;
+    --primary-color: #667; /* pseudo klasa def. globalnu css varijablu */
 }
 
 p{
@@ -23,7 +19,7 @@ p{
 }
 
 body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--primary-color);
 } 
 
@@ -38,9 +34,10 @@ body{
 
 #page-layout.active {
     left: -200px;
+    
 }
 
-/*----------------------- hamburger meni ############################################---------------------*/
+/*############################# hamburger meni ############################################*/
 .hamburger-menu {
     display: none;
     position: absolute;
@@ -95,6 +92,7 @@ body{
 }
 
 /* ############################ kraj hamburger menija ############################## */
+
 /* HEADER */
 
 #header-naslovna{
@@ -206,7 +204,6 @@ img {
     color: white;
 }
 
-
 /*----logo animacija ---*/
 /* početno stanje prije pojave */
 .logo {
@@ -241,7 +238,6 @@ img {
     font-weight: 900; /* ne radi */
     text-transform: uppercase;
 }
-
 
 /* class naslov css animacija - zumiranje naslova */
 .naslov {
@@ -605,7 +601,7 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
 /*-------------------- O NAMA & KONTAKT-----------------------------*/
 
 .header-naslovna{
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0,0,0,0.1) 100%), 
     url("../slike/o-nama2.jpg") no-repeat fixed top/cover;
     display: flex;
     flex-direction: column;
@@ -773,10 +769,13 @@ CSS animira prelazak iz opacity:0 → 1 i translateY(40px) → 0.*/
     cursor: pointer;
 }
 
+.btn-a {
+  display: block;
+  text-align: center;
+}
+
 .btn-recepti {
-    position: static;
-    margin: 1.2% 48%;
-    padding: 0.3%;
+    margin: 20px auto;
     width: 100px;
     cursor: pointer;
 }
@@ -1028,7 +1027,7 @@ aside a{
 .rezultat {
   display: flex;
   gap: 15px;
-  width: 400px;
+  width: 450px;
   margin: 20px 0;
   padding: 15px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
@@ -1064,11 +1063,9 @@ aside a{
 #proizvodi {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
     gap: 20px;
-    width: 30%;
-    height: auto;
-    margin: 2% 5%; 
+    width: 70%;
+    margin: 0 auto; 
 }
 
 #cjenik {
@@ -1272,14 +1269,12 @@ footer h3{
   width: 45px;
   height: 45px;
   cursor: pointer;
-  opacity: 0;
-  pointer-events: none; /* da ne smeta dok je nevidljivo */
   transition: opacity 0.4s ease;
   z-index: 999;
 }
 
 #na-vrh {
-  opacity: 1;
+  opacity: 0.7;
   pointer-events: auto;
 }
 
